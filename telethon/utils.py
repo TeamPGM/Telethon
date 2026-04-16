@@ -798,8 +798,8 @@ def sanitize_parse_mode(mode):
     elif isinstance(mode, str):
         try:
             return {
-                'md': markdown,
-                'markdown': markdown,
+                'md': markdown.StrictMarkdown,
+                'markdown': markdown.StrictMarkdown,
                 'htm': html,
                 'html': html
             }[mode.lower()]
